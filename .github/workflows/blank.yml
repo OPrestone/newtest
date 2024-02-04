@@ -14,7 +14,7 @@ jobs:
 
       - name: cPanel Deploy Action
         uses: pinkasey/cpanel-deploy-action@v1.1.2
-        with:
+        with: 
           hostname: ${{ secrets.CPANEL_HOSTNAME }}
           cPanelApiPort: ${{ secrets.CPANEL_API_PORT }}
           cpanel_token: ${{ secrets.CPANEL_TOKEN }}
