@@ -21,4 +21,5 @@ jobs:
           cpanel_username: ${{ secrets.CPANEL_USERNAME }}
           repository_root: '/home/newsblee/repositories/newtest'
           updateRepository: true
+          
           branch: 'main'
