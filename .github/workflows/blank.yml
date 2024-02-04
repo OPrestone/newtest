@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2.4.3  # with the latest version of actions/checkout
+        uses: actions/checkout@v2
 
       - name: cPanel Deploy Action
         uses: pinkasey/cpanel-deploy-action@v1.1.2
@@ -19,6 +19,6 @@ jobs:
           cPanelApiPort: ${{ secrets.CPANEL_API_PORT }}
           cpanel_username: ${{ secrets.CPANEL_USERNAME }}
           cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
-          repository_root: '/home/your_account/repositories/your_repository'
+          repository_root: '/home/newsblee/repositories/newtest'
           updateRepository: true
           branch: 'main'
