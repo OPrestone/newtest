@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2.4.3  # Replace with the latest version of actions/checkout
+        uses: actions/checkout@v2.4.3  # with the latest version of actions/checkout
 
       - name: cPanel Deploy Action
         uses: pinkasey/cpanel-deploy-action@v1.1.2
