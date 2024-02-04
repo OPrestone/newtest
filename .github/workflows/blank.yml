@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+
+name: cPanel Deploy Action
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2.4.3  # Replace with the latest version of actions/checkout
+
+      - name: cPanel Deploy Action
+        uses: pinkasey/cpanel-deploy-action@v1.1.2
+        with:
+          hostname: ${{ secrets.CPANEL_HOSTNAME }}
+          cPanelApiPort: ${{ secrets.CPANEL_API_PORT }}
+          cpanel_username: ${{ secrets.CPANEL_USERNAME }}
+          cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
+          repository_root: '/home/your_account/repositories/your_repository'
+          updateRepository: true
+          branch: 'main'
